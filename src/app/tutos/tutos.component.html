@@ -1,0 +1,51 @@
+<style>
+  button {float : left; margin : 10px;}
+  p{padding: 10px;}
+  div {clear: both;}
+</style>
+
+<div class="card highlight-card">
+  <h5>{{ title }}</h5>  
+</div>
+
+<button (click)="sayHello()" [disabled]="isDisplayed" class="btn btn-sm btn-info">Cliquez!</button>
+<p [style.color]="messageColor" [ngStyle]="buttonStateStyles">{{ message }}</p>
+
+<button style="clear: both" class="btn btn-sm btn-info" *ngIf="isDisplayed">Reset Message!</button>
+
+
+<div [ngClass]="'alert alert-success'" >
+  Lorem ipsum dolor sit amet consectetur adipisicing elit..
+</div>
+
+<div [ngStyle]="{'border':'dashed yellow', 'padding':'10px', 'margin':'5px 0'}">
+   Lorem ipsum dolor sit amet consectetur adipisicing elit..
+</div>
+
+<table class="table table-bordered" style="max-width: 50%;">
+  <tr>
+    <td [colSpan]="1 + 1"> 1 2</td>
+    <td>3</td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td>5</td>
+    <td>6</td>
+  </tr>
+</table>
+
+
+<h5>Tutos (Liste) :</h5>
+<ul>
+    <li *ngFor="let tuto of tutos">{{ tuto.title }}</li>
+</ul>
+
+<!-- <form>
+  <label for="test-ngModel">[(ngModel)]:</label>
+  <input [(ngModel)]="currentTuto.title" id="test-ngModel">
+</form> -->
+
+
+<!-- 
+<div ng-include src="'../includes/menu.html'"></div> -->
+
